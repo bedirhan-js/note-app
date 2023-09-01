@@ -1,0 +1,231 @@
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  --main-font: "Oswald", sans-serif;
+
+  font-family: var(--main-font);
+  background: #eee;
+}
+
+html {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.main {
+  max-width: 79rem;
+  margin: -47rem 1rem 0rem 34rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card_image {
+  height: calc(13 * 1.2rem);
+  padding: 1.2rem 1.2rem 0;
+  position: relative;
+}
+
+.card_image:before,
+.card_image:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  left: 60%;
+  top: 0;
+  height: 45px;
+  background: #e6e6e6b8;
+  transform: rotate(45deg);
+}
+.card_image:after {
+  transform: rotate(-45deg);
+  top: auto;
+  bottom: -22px;
+  left: 40%;
+}
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.cards_item {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 30px;
+  background: linear-gradient(red 0 0) 30px 0/2px 100% #fff;
+  background-repeat: no-repeat;
+  line-height: 1.2rem;
+  -webkit-mask: radial-gradient(circle 0.8rem at 2px 50%, #0000 98%, #000) 0 0/100%
+    2.4rem;
+}
+
+.card_content {
+  padding: 1.2rem;
+}
+
+h2.card_title,
+p {
+  margin: 1.2rem 0;
+}
+h2.card_title {
+  font-size: 1.3em;
+}
+
+/* Yeni not ekle start */
+
+.container {
+  max-width: 20rem;
+  margin: 8rem 0px 0px 4rem;
+  padding: 45px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding-right: 65px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+  display: flex;
+  font-size: 24px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.note-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.note-form input[type="text"],
+.note-form textarea {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  outline: none;
+
+  padding: 7px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fbfbfb;
+  border: 2px solid transparent;
+  height: 36px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+
+.note-form textarea:focus {
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+.note-form input[type="text"]:focus {
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+.note-form button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--main-font);
+  font-size: 20px;
+}
+
+/* Yeni not ekle end */
+
+#file-input {
+  display: none;
+}
+
+#file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.butonlar {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#delete-button {
+  font-family: var(--main-font);
+  font-size: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid blue;
+  cursor: pointer;
+  color: blue;
+}
+
+#delete-button:hover {
+  background-color: transparent;
+  border: 1px solid red;
+  cursor: pointer;
+  color: red;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin: auto; */
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.card_text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#note-content {
+  max-width: 300px;
+
+  height: 250px;
+}
